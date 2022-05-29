@@ -1,22 +1,19 @@
 num=int(input())
-rev=0
-rev1=0
-s=0
 count=0
-count1=0
-for j in range(2,num):
-     if num%j==0:
-        count1+=1
-while(num>0):
-    s=num%10
-    rev=rev*10+s
-    num//=10
-for i in range(2,rev):
-    if rev%i==0:
-        count+=1
-if count==0:
-    print("circular prime")
-elif count1!=0:
-    print("not prime")
+b= int(str(num)[::-1])
+for i in range(2,num):
+    if num%i==0:
+        break
 else:
+    count=1
+for j in range(2,b):
+    if b%j==0:
+        break
+else:    
+    count=2
+if count==0:
+    print("not prime")
+elif count==1:
     print("prime but not a circular prime")
+elif count==2:
+    print("circular prime")
