@@ -8,7 +8,8 @@ for i in range(1,a):
 for j in range(1,b):
     if b%j==0:
         sum1+=j
-if sum==b and sum1==a:
-    print('Amicable')
+if (sum==b and sum1==a):
+    print("Amicable")
 else:
-    print('Not Amicable')
+    print("Not Amicable")
+        
