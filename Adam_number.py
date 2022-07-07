@@ -1,17 +1,17 @@
-num=int(input())#12
-rev=0
-rev2=0
-sq=num**2#144
-while num>0:
-    digit = num % 10
-    rev= rev* 10 + digit#21
-    num//= 10
-sq_rev=rev**2#441
-while(sq_rev>0):
-    dig = sq_rev % 10
-    rev2 =  rev2* 10 + dig#144
-    sq_rev//= 10
-if(rev2==sq):
+x = int(input())
+n = x**2
+s=0
+while x!=0:
+    v = x%10
+    s = s*10+v
+    x=x//10
+m = s**2
+a=0
+while m!=0:
+    c = m%10
+    a = a*10+c
+    m = m//10
+if n==a:
     print("True")
 else:
     print("False")
