@@ -7,20 +7,20 @@ def is_prime(j):
         i+=1
     if v==0:
         return j
-y=int(input())
+y = int(input())
 b=y
 for j in range(y,2,-1):
-        if is_prime(j):
-            n=j
-            break
+    if is_prime(j):
+        n=j
+        break
 while b!=0:
     if is_prime(b):
         m=b
         break
     b+=1
-if(y-n)<(m-y):
+if (y-n)<(m-y):
     print(abs(n-y))
-elif(y-n)==(m-y):
+elif (y-n)==(m-y):
     print(abs(n-y))
 else:
     print(abs(m-y))
