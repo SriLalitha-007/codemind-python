@@ -1,8 +1,9 @@
-import math
-num = int(input())
-
-root = math.sqrt(num)
-if int(root + 0.5) ** 2 == num:
-    print("True")
+x=int(input())
+for i in range(1,int((x**0.5)+1)):
+    c=0
+    if(i*i==x):
+        c=1
+if(c==1):
+    print(True)
 else:
-    print("False")
+    print(False)
