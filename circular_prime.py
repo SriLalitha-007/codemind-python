@@ -1,19 +1,20 @@
-num=int(input())
-count=0
-b= int(str(num)[::-1])
-for i in range(2,num):
-    if num%i==0:
-        break
+def prime(n):
+    if n==1:
+        return False
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
+            return False
+    return True
+n=int(input())
+a=n
+res=0
+while n!=0:
+    temp=n%10
+    res=res*10+temp;
+    n//=10
+if prime(a) and prime(res):
+        print('circular prime')
+elif prime(a):
+    print('prime but not a circular prime')
 else:
-    count=1
-for j in range(2,b):
-    if b%j==0:
-        break
-else:    
-    count=2
-if count==0:
-    print("not prime")
-elif count==1:
-    print("prime but not a circular prime")
-elif count==2:
-    print("circular prime")
+    print('not prime')
