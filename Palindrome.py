@@ -1,4 +1,14 @@
-num=input()
-b=num[::-1]
+def palin(v):
+    if len(v) < 1:
+        return True
+    else:
+        if v[0] == v[-1]:
+            return palin(v[1:-1])
+        else:
+            return False
 
-print(num==b)
+a = input()
+if(palin(a)):
+    print("True")
+else:
+    print("False")
