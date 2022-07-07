@@ -1,14 +1,14 @@
-num=eval(input())
-c=len(str(num))
-temp=num
+x=eval(input())
+c=len(str(x))
+temp=x
 s=0
-while num!=0:
-    a=num%10
-    num//=10
+while x!=0:
+    a= x % 10
+    x//=10
     m=a**c
     s+=m
     c-=1
 if s==temp:
-    print("True")
+    print(True)
 else:
-    print('False')
+    print(False)
